@@ -1,0 +1,185 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	overflow-x: hidden;
+}
+
+#site {
+	display: grid;
+	grid-template-columns: 0.9fr 1fr 1fr;
+	grid-template-rows: 0.37fr 3fr 3fr;
+	grid-template-areas:
+	"header header header header"
+	"article carrousel carrousel carrousel"
+	"article carrousel carrousel carrousel";
+	width: 100%;
+	height: 100vh;
+	margin: 0px auto;
+}
+
+header {
+	background-color: white;
+	grid-area: header;
+	width: 100%;
+}
+
+article {
+	background-color: rgba(255, 255, 255, 0.0);
+	grid-area: article;
+}
+
+carrousel {
+	background-color: rgba(255, 255, 255, 0.0);
+	grid-area: carrousel;
+	padding: 20px;
+}
+
+a {
+	font-family: 'Papercraft';
+	font-style: italic;
+	text-decoration: none;
+	position: relative;
+	padding: 5.5px;
+	display: inline-block;
+	margin-right: 10px;
+	margin-top: 1px;
+	font-size: 27px;
+	color:#676767;
+}
+
+.contenu {
+	position: absolute;
+	top: 20px;
+	height: 100%;
+	color:#676767;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+h1 {
+    text-align:left;
+	position: flex;
+    color: #676767;
+	font-size:14px;
+	padding: 25px;
+	font-weight:100;
+	font-family: 'Arial';
+    z-index:2;	
+	top: 55px;
+	left: 16px;
+	word-wrap: break-word;
+}
+
+
+.video-fond { 
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: -1;
+	overflow: hidden;
+}
+
+.slider { 
+    position: center; 
+	overflow: hidden; 
+	width: 1000px; /* Ajuste la largeur selon tes besoins */ 
+	height: auto; /* Ajuste la hauteur selon tes besoins */ 
+	margin: 0 auto;
+	margin-top: -8px;
+	object-fit: cover;
+	animation: slide 10s linear infinite;
+	max-width: 100%;
+
+} 
+
+.slides { 
+	display: flex; 
+	transition: transform 0.6s ease; /* Transition fluide */ 
+} 
+
+.slide { 
+	width: 100%; /* Chaque image prend toute la largeur du slider */ 
+	object-fit: cover;
+}
+
+@media only screen and (max-width:800px){
+	#site {
+		display: grid;
+	    grid-template-columns: 1fr;
+	    grid-template-rows: 0.23fr 3.5fr 2fr;
+	    grid-template-areas:
+	    "header"
+	    "article"
+	    "carrousel";
+	    width: 100%;
+	    height: 100vh;
+	    margin: 0px auto;
+	}
+}
+	
+@media (max-width: 800px){
+	a {
+		font-size: 25px;
+		padding: 0px;
+		margin: 1px;
+		right: 13px;
+	}
+}
+
+@media (max-width: 800px){
+    header {
+	    display: flex;
+		justify-content: flex-end;
+		list-style-type: none;
+		padding: 4px;	
+	}
+}
+
+@media (max-width: 800px){
+    carrousel {
+	    background-color: rgba(255, 255, 255, 0.0);
+	    grid-area: carrousel;
+	    padding: 13px;
+    }
+}
+
+@media (max-width: 800px){
+	.slider {
+		position: relative;
+		top: 0;
+		right: 0;
+		width: 100%;
+		margin-top: 30px;
+		order: 2;
+	}
+}
+
+@media (max-width: 800px){
+	h1 {
+		left: 10px;
+		font-size: 13px;
+		padding: 14px;
+	}
+}
+
+@media (max-width: 600px){
+	a {
+		font-size: 21.9px;
+		padding: 3px;
+		margin: 1px;
+		right: 13px;
+	}
+}
+
+@media (max-width: 600px){
+    header {
+	    display: flex;
+		justify-content: flex-end;
+		list-style-type: none;
+		padding: 1.px;	
+	}
+}
